@@ -29,19 +29,36 @@ class HomeScreen extends StatelessWidget {
               textData: 'Go to Sign In',
             ),
             const SizedBox(
-              height: 40,
+              height: 20,
             ),
             ElevatedButton(
                 onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                    padding: EdgeInsets.all(15.0),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15),
+                    )),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text('No account yet'),
+                    Text(
+                      'No account yet?',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 17,
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 10,
+                    ),
                     Text(
                       'Sign Up',
                       style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20,
-                          color: Colors.deepOrange),
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                        color: Colors.deepOrange,
+                      ),
                     )
                   ],
                 ))

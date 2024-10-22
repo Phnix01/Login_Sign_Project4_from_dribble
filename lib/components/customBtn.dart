@@ -28,7 +28,7 @@ class CustomBtn extends StatelessWidget {
           textData,
           style: TextStyle(
             fontWeight: FontWeight.bold,
-            fontSize: 20,
+            fontSize: 17,
           ),
         ),
       ),
