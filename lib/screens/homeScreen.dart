@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:login_sign_prj4_dribble/components/customBtn.dart';
 import 'package:login_sign_prj4_dribble/screens/SignInScreen.dart';
+import 'package:login_sign_prj4_dribble/screens/SignUpScreen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -11,6 +12,11 @@ class HomeScreen extends StatelessWidget {
     void gotoSignInScreen() {
       Navigator.push(
           context, MaterialPageRoute(builder: (context) => SignInScreen()));
+    }
+
+    void gotoSignUpScreen() {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => SignUpScreen()));
     }
 
     return Scaffold(
@@ -47,7 +53,7 @@ class HomeScreen extends StatelessWidget {
               height: 20,
             ),
             ElevatedButton(
-                onPressed: () {},
+                onPressed: gotoSignUpScreen,
                 style: ElevatedButton.styleFrom(
                     padding: EdgeInsets.all(15.0),
                     shape: RoundedRectangleBorder(

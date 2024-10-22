@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:login_sign_prj4_dribble/components/customBtn.dart';
 import 'package:login_sign_prj4_dribble/components/customInput.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class SignInScreen extends StatelessWidget {
   const SignInScreen({super.key});
@@ -8,6 +9,10 @@ class SignInScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        automaticallyImplyLeading: true,
+      ),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(40.0),
@@ -15,7 +20,13 @@ class SignInScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Welcome \n back!'),
+              Text(
+                'Welcome \n back!',
+                style: GoogleFonts.openSans(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 34,
+                ),
+              ),
               const SizedBox(
                 height: 40,
               ),
