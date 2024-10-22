@@ -6,6 +6,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    void gotoSignInScreen() {}
     return Scaffold(
       body: SafeArea(
           child: Padding(
@@ -23,6 +24,7 @@ class HomeScreen extends StatelessWidget {
             ),
             Image.asset('assets/Air-Balloon-PNG-Image.png'),
             CustomBtn(
+              onPressed: gotoSignInScreen,
               couleur: Colors.deepOrange,
               textData: 'Go to Sign In',
             ),

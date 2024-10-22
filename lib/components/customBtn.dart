@@ -9,18 +9,29 @@ class CustomBtn extends StatelessWidget {
   final String textData;
   final void Function()? onPressed;
   final Color couleur;
+
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
+    return SizedBox(
+      width: 350,
+      child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
-            backgroundColor: couleur, foregroundColor: Colors.white),
+          backgroundColor: couleur, // Utilisation de la couleur passée
+          foregroundColor: Colors.white,
+          padding: EdgeInsets.all(15.0),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(15), // Correction ici
+          ),
+        ),
         child: Text(
           textData,
           style: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 20,
           ),
-        ));
+        ),
+      ),
+    );
   }
 }
