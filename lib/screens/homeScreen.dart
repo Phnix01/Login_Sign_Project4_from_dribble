@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:login_sign_prj4_dribble/components/customBtn.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -14,11 +15,20 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('Welcome !'),
+            Text('Welcome !',
+                style: GoogleFonts.openSans(
+                  fontSize: 35,
+                  fontWeight: FontWeight.bold,
+                )),
             const SizedBox(
-              height: 20,
+              height: 10,
             ),
-            Text('Sign in or create a new account '),
+            Text(
+              'Sign in or create a new account ',
+              style: GoogleFonts.openSans(
+                color: Colors.grey,
+              ),
+            ),
             const SizedBox(
               height: 40,
             ),
