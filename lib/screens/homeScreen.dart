@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:login_sign_prj4_dribble/components/customBtn.dart';
+import 'package:login_sign_prj4_dribble/screens/SignInScreen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    void gotoSignInScreen() {}
+    void gotoSignInScreen() {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => SignInScreen()));
+    }
+
     return Scaffold(
       body: SafeArea(
           child: Padding(
